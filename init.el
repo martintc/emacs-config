@@ -4,7 +4,7 @@
 
 (setq package-list '(helm csharp-mode lsp-mode rustic neotree spacemacs-theme
 			  flycheck company omnisharp lsp-ui cargo dotnet magit
-			  restart-emacs))
+			  restart-emacs doom-themes))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Getting MELPA
@@ -23,16 +23,34 @@
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default default default italic underline success warning error])
- '(custom-enabled-themes '(spacemacs-dark))
+ '(custom-enabled-themes '(doom-gruvbox))
  '(custom-safe-themes
-   '("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "1d5e33500bc9548f800f9e248b57d1b2a9ecde79cb40c0b1398dec51ee820daf" "41098e2f8fa67dc51bbe89cce4fb7109f53a164e3a92356964c72f76d068587e" "ba72dfc6bb260a9d8609136b9166e04ad0292b9760a3e2431cf0cd0679f83c3a" "0cc49ad1ef7a63e9489f624a26878c2257f10607bd863635dfa196ecccfb9e2b" default))
+   '("c4063322b5011829f7fdd7509979b5823e8eea2abf1fe5572ec4b7af1dd78519" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "1d5e33500bc9548f800f9e248b57d1b2a9ecde79cb40c0b1398dec51ee820daf" "41098e2f8fa67dc51bbe89cce4fb7109f53a164e3a92356964c72f76d068587e" "ba72dfc6bb260a9d8609136b9166e04ad0292b9760a3e2431cf0cd0679f83c3a" "0cc49ad1ef7a63e9489f624a26878c2257f10607bd863635dfa196ecccfb9e2b" default))
  '(exwm-floating-border-color "#252526")
  '(fci-rule-color "#37474F")
  '(highlight-tail-colors ((("#232a22" "#232a21") . 0) (("#283134" "#243034") . 20)))
+ '(hl-todo-keyword-faces
+   '(("TODO" . "#dc752f")
+     ("NEXT" . "#dc752f")
+     ("THEM" . "#2d9574")
+     ("PROG" . "#4f97d7")
+     ("OKAY" . "#4f97d7")
+     ("DONT" . "#f2241f")
+     ("FAIL" . "#f2241f")
+     ("DONE" . "#86dc2f")
+     ("NOTE" . "#b1951d")
+     ("KLUDGE" . "#b1951d")
+     ("HACK" . "#b1951d")
+     ("TEMP" . "#b1951d")
+     ("FIXME" . "#dc752f")
+     ("XXX+" . "#dc752f")
+     ("\\?\\?\\?+" . "#dc752f")))
  '(jdee-db-active-breakpoint-face-colors (cons "#171F24" "#237AD3"))
  '(jdee-db-requested-breakpoint-face-colors (cons "#171F24" "#579C4C"))
  '(jdee-db-spec-breakpoint-face-colors (cons "#171F24" "#777778"))
  '(objed-cursor-color "#D16969")
+ '(org-fontify-done-headline nil)
+ '(org-fontify-todo-headline nil)
  '(package-selected-packages
    '(spacemacs-theme neotree cargo dotnet omnisharp company lsp-ui flycheck lsp-mode magit rustic csharp-mode restart-emacs dashboard shanty-themes ewal-spacemacs-themes doom-themes helm-file-preview helm))
  '(rustic-ansi-faces
@@ -96,3 +114,10 @@
 (add-hook 'csharp-mode-hook #'company-mode)
 (add-hook 'csharp-mode-hook 'flycheck-mode)
 (add-hook 'csharp-mode-hook #'lsp)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; electric pair mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(electric-pair-mode 1)
+
