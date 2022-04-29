@@ -1,4 +1,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; List of packages
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(setq package-list '(helm csharp-mode lsp-mode rustic neotree spacemacs-theme
+			  flycheck company omnisharp lsp-ui cargo dotnet magit
+			  restart-emacs))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Getting MELPA
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -26,7 +34,7 @@
  '(jdee-db-spec-breakpoint-face-colors (cons "#171F24" "#777778"))
  '(objed-cursor-color "#D16969")
  '(package-selected-packages
-   '(neotree cargo dotnet omnisharp company lsp-ui flycheck lsp-mode magit rustic csharp-mode restart-emacs dashboard shanty-themes ewal-spacemacs-themes doom-themes helm-file-preview helm))
+   '(spacemacs-theme neotree cargo dotnet omnisharp company lsp-ui flycheck lsp-mode magit rustic csharp-mode restart-emacs dashboard shanty-themes ewal-spacemacs-themes doom-themes helm-file-preview helm))
  '(rustic-ansi-faces
    ["#1e1e1e" "#D16969" "#579C4C" "#D7BA7D" "#339CDB" "#C586C0" "#85DDFF" "#d4d4d4"])
  '(vc-annotate-background "#1e1e1e")
@@ -57,6 +65,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(package-refresh-contents)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Install packages defined but not present
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Initializing helm settings
