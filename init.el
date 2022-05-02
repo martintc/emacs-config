@@ -4,7 +4,7 @@
 
 (setq package-list '(helm csharp-mode lsp-mode rustic neotree spacemacs-theme
 			  flycheck company omnisharp lsp-ui cargo dotnet magit
-			  restart-emacs doom-themes rust-mode go-mode))
+			  restart-emacs doom-themes rust-mode go-mode cargo-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Getting MELPA
@@ -52,7 +52,7 @@
  '(org-fontify-done-headline nil)
  '(org-fontify-todo-headline nil)
  '(package-selected-packages
-   '(go-mode spacemacs-theme neotree cargo dotnet omnisharp company lsp-ui flycheck lsp-mode magit rustic csharp-mode restart-emacs dashboard shanty-themes ewal-spacemacs-themes doom-themes helm-file-preview helm))
+   '(cargo-mode go-mode spacemacs-theme neotree cargo dotnet omnisharp company lsp-ui flycheck lsp-mode magit rustic csharp-mode restart-emacs dashboard shanty-themes ewal-spacemacs-themes doom-themes helm-file-preview helm))
  '(rustic-ansi-faces
    ["#1e1e1e" "#D16969" "#579C4C" "#D7BA7D" "#339CDB" "#C586C0" "#85DDFF" "#d4d4d4"])
  '(vc-annotate-background "#1e1e1e")
