@@ -121,3 +121,4 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (electric-pair-mode 1)
 (helm-mode 1)
+(toggle-word-wrap -1)
